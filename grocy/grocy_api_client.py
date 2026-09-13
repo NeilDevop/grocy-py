@@ -375,7 +375,7 @@ class SystemTimeDto(BaseModel):
 class SystemConfigDto(BaseModel, extra="allow"):
     """API response model for system configuration."""
 
-    username: str = Field(alias="USER_USERNAME")
+    username: str | None = Field(default=None, alias="USER_USERNAME")
     base_path: str = Field(alias="BASE_PATH")
     base_url: str = Field(alias="BASE_URL")
     mode: str = Field(alias="MODE")
